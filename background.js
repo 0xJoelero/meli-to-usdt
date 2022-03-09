@@ -19,7 +19,7 @@ async function renderPage() {
   }
 
   function retrieveUSDT(rates = []) {
-    return rates.filter((rate) => rate.pairCode === 'USDC/ARS')[0];
+    return rates.filter((rate) => rate.pairCode === 'USDC_ARS')[0];
   }
 
   function getElement(elementName) {
@@ -37,7 +37,7 @@ async function renderPage() {
     for (let i = 0; i < elements.length; i++) {
       elements[i].style.color = 'green';
       elements[i].innerHTML =
-        (elements[i].innerHTML.replace('.', '') / ask).toFixed(2) + ' USDT';
+        (elements[i].innerHTML.replace('.', '') / ask).toFixed(2) + ' USDC';
     }
   }
 
