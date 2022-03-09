@@ -10,7 +10,7 @@ async function renderPage() {
       redirect: 'follow',
       referrerPolicy: 'no-referrer'
     };
-    return await fetchURL('https://api.belo.app/public/price', options);
+    return await fetchURL('https://app.ripio.com/api/v3/public/rates/?country=AR', options);
   }
 
   async function fetchURL(url = '', options = {}) {
@@ -19,7 +19,7 @@ async function renderPage() {
   }
 
   function retrieveUSDT(rates = []) {
-    return rates.filter((rate) => rate.pairCode === 'USDT/ARS')[0];
+    return rates.filter((rate) => rate.pairCode === 'USDC/ARS')[0];
   }
 
   function getElement(elementName) {
